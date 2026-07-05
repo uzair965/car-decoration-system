@@ -1,0 +1,27 @@
+{
+  "name": "car-decoration-system",
+  "version": "1.0.0",
+  "description": "Car Decoration Management System - Full Stack ERP Lite",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
+    "dev:client": "cd client && npm run dev",
+    "dev:server": "cd server && npm run dev",
+    "install:all": "cd client && npm install && cd ../server && npm install",
+    "build:client": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "db:migrate": "cd server && npx prisma migrate dev",
+    "db:seed": "cd server && npm run db:seed",
+    "db:studio": "cd server && npx prisma studio"
+  },
+  "keywords": [
+    "erp",
+    "car-decoration",
+    "management-system"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^10.0.3"
+  }
+}
